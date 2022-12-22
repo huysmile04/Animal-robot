@@ -226,7 +226,6 @@ void loop() {
       if (currentAngle[i] < MAX[i])
         currentAngle[i] += 1;
       switch (i) {
-
         case 0: myservo1.write(currentAngle[i]); break;
         case 1: myservo2.write(currentAngle[i]); break;
         case 2: myservo3.write(currentAngle[i]); break;
@@ -249,7 +248,6 @@ void openGripper() {
   myservo1.write(MIN[0]);
   delay(300);
 }
-
 void closeGripper() {
   myservo1.write(MAX[90]);
   delay(300);
@@ -263,7 +261,6 @@ void forward() {
   digitalWrite(11, LOW);
   digitalWrite(10, HIGH);
 }
-
 void right() {
   analogWrite(A3, 200);
   digitalWrite(8, LOW);
@@ -272,7 +269,6 @@ void right() {
   digitalWrite(11, LOW);
   digitalWrite(10, HIGH);
 }
-
 void back() {
   digitalWrite(8, LOW);
   digitalWrite(9, HIGH);
@@ -300,7 +296,6 @@ void full() {
 void stop() {
   digitalWrite(8, LOW);
   digitalWrite(9, LOW);
-
   digitalWrite(11, LOW);
   digitalWrite(10, LOW);
 }
